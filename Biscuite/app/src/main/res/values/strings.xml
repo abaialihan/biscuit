@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Biscuit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">chats</string>
+    <string name="default_username">David Beckham</string>
+    <string name="online_status">в сети</string>
+    <string name="settings_account">Аккаунт</string>
+    <string name="settings_default_phone_number">+996777555666</string>
+    <string name="settings_label_phone_nmber">Нажмите, чтобы изменить номер телефона</string>
+    <string name="settings_default_login">davidbeckham</string>
+    <string name="settings_label_login">Имя пользователя</string>
+    <string name="settings_default_bio_label">О себе</string>
+    <string name="settings_default_bio">Напишите неммного о себе</string>
+    <string name="settings_menu_change_name">Изменить имя</string>
+    <string name="settings_menu_exit">Выйти</string>
+    <string name="c_register_imageview">register_imageView</string>
+    <string name="register_text_enter_coe">Введите код</string>
+</resources>
