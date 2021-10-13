@@ -15,4 +15,8 @@
     <string name="settings_menu_exit">Выйти</string>
     <string name="c_register_imageview">register_imageView</string>
     <string name="register_text_enter_coe">Введите код</string>
+    <string name="register_text_we_send">Мы отправили SMS с кодом проверки на Ваш телефон</string>
+    <string name="register_default_hint">- - - - - -</string>
+    <string name="register_title_your_phone">Ваш телефон</string>
+    <string name="register_toast_enter_phone">Введите номер телефона</string>
 </resources>

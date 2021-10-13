@@ -4,6 +4,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.biscuit.ui.fragments.SettingsFragment
+import com.example.biscuit.utilits.replaceFragment
 import com.example.biscuite.R
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
@@ -105,9 +106,7 @@ class AppDrawer (val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
                 ): Boolean {
 
                     when(position){
-                        7 -> mainActivity.supportFragmentManager.beginTransaction()
-                            .addToBackStack(null)
-                            .replace(R.id.data_container, SettingsFragment()).commit()
+                        7 -> mainActivity.replaceFragment(SettingsFragment())
                     }
                     return false
                 }
