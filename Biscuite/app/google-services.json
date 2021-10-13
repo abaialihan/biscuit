@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "265929842567",
+    "project_id": "biscuite-1499f",
+    "storage_bucket": "biscuite-1499f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265929842567:android:3dc8c1c4ae1565059f7d22",
+        "android_client_info": {
+          "package_name": "com.example.biscuite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265929842567-2s9qg3il0k2sebaedimi2b9mva91u49g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCkWt1Sb9-CW8s7RKvZRD7cp336CZ1MIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265929842567-2s9qg3il0k2sebaedimi2b9mva91u49g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

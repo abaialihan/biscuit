@@ -21,11 +21,17 @@ fun AppCompatActivity.replaceActivity(activity: AppCompatActivity) {
 }
 
 // // для переключения Fragment в Activity
-fun AppCompatActivity.replaceFragment(fragment: Fragment){
-    supportFragmentManager.beginTransaction()
-        .addToBackStack(null)
-        .replace(R.id.data_container, fragment)
-        .commit()
+fun AppCompatActivity.replaceFragment(fragment: Fragment, addStack: Boolean = true){
+    if (addStack) {
+        supportFragmentManager.beginTransaction()
+            .addToBackStack(null)
+            .replace(R.id.data_container, fragment)
+            .commit()
+    }else{
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.data_container, fragment)
+            .commit()
+    }
 }
 
 // // для переключения Fragment в Fragment
