@@ -7,6 +7,7 @@ import com.example.biscuit.activities.RegisterActivity
 import com.example.biscuit.ui.fragments.ChatsFragment
 import com.example.biscuit.ui.objects.AppDrawer
 import com.example.biscuit.utilits.AUTH
+import com.example.biscuit.utilits.initFirebase
 import com.example.biscuit.utilits.replaceActivity
 import com.example.biscuit.utilits.replaceFragment
 import com.example.biscuite.databinding.ActivityMainBinding
@@ -48,6 +49,6 @@ class MainActivity : AppCompatActivity() {
     private fun initFields() {
         mToolbar = mBinding.mainToolbar
         mAppDrawer = AppDrawer(this, mToolbar)
-        AUTH = FirebaseAuth.getInstance()
+        initFirebase()
     }
 }

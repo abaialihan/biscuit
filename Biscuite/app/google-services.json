@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "265929842567",
+    "firebase_url": "https://biscuite-1499f-default-rtdb.firebaseio.com",
     "project_id": "biscuite-1499f",
     "storage_bucket": "biscuite-1499f.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "265929842567-82uq5qt63asdqj5duu6q71rfh078fthq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.biscuite",
+            "certificate_hash": "00a7b5f50137b40d24860af57a185acd2679450f"
+          }
+        },
         {
           "client_id": "265929842567-2s9qg3il0k2sebaedimi2b9mva91u49g.apps.googleusercontent.com",
           "client_type": 3

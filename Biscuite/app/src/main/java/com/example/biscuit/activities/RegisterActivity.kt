@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import com.example.biscuit.ui.fragments.EnterPhoneNumberFragment
+import com.example.biscuit.utilits.initFirebase
 import com.example.biscuit.utilits.replaceFragment
 import com.example.biscuite.R
 
@@ -17,6 +18,7 @@ import com.example.biscuite.databinding.ActivityRegisterBinding
         super.onCreate(savedInstanceState)
         mBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        initFirebase()
     }
 
       override fun onStart() {

@@ -20,7 +20,7 @@ fun AppCompatActivity.replaceActivity(activity: AppCompatActivity) {
     this.finish()
 }
 
-// // для переключения Fragment в Activity
+// для переключения Fragment в Activity
 fun AppCompatActivity.replaceFragment(fragment: Fragment, addStack: Boolean = true){
     if (addStack) {
         supportFragmentManager.beginTransaction()
@@ -34,10 +34,10 @@ fun AppCompatActivity.replaceFragment(fragment: Fragment, addStack: Boolean = tr
     }
 }
 
-// // для переключения Fragment в Fragment
+// для переключения Fragment в Fragment
 fun Fragment.replaceFragment(fragment: Fragment){
-    parentFragmentManager.beginTransaction()
-        .addToBackStack(null)
-        .replace(R.id.data_container, fragment)
-        .commit()
+    this.fragmentManager?.beginTransaction()
+        ?.addToBackStack(null)
+        ?.replace(R.id.data_container, fragment)
+        ?.commit()
 }
