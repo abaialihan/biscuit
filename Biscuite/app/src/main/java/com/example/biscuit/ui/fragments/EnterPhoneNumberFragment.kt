@@ -1,7 +1,7 @@
 package com.example.biscuit.ui.fragments
 
 import androidx.fragment.app.Fragment
-import com.example.biscuit.MainActivity
+import com.example.biscuit.activities.MainActivity
 import com.example.biscuit.activities.RegisterActivity
 import com.example.biscuit.utilits.AUTH
 import com.example.biscuit.utilits.replaceActivity
@@ -9,8 +9,8 @@ import com.example.biscuit.utilits.replaceFragment
 import com.example.biscuit.utilits.showToast
 import com.example.biscuite.R
 import com.google.firebase.FirebaseException
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_phone_number.*
 import java.util.concurrent.TimeUnit
@@ -44,6 +44,7 @@ class EnterPhoneNumberFragment : Fragment(R.layout.fragment_enter_phone_number) 
             override fun onCodeSent(id: String, token: PhoneAuthProvider.ForceResendingToken) {
                 // после отправки кода переходим в EnterCodeFragment()
                 replaceFragment(EnterCodeFragment(mPhoneNumber, id))
+
             }
         }
         register_btn_next.setOnClickListener{
@@ -60,15 +61,24 @@ class EnterPhoneNumberFragment : Fragment(R.layout.fragment_enter_phone_number) 
         }
     }
 
-    //авторизация
+    //авторизация и верификация
     private fun authUser() {
         mPhoneNumber = register_input_phone_number.text.toString()
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            mPhoneNumber,
-            60,
-            TimeUnit.SECONDS,
-            activity as RegisterActivity,
-            mCallBack
-        )
+        val options = PhoneAuthOptions.newBuilder(AUTH)
+            .setPhoneNumber(mPhoneNumber)
+            .setTimeout(60L, TimeUnit.SECONDS)
+            .setActivity(activity as RegisterActivity)
+            .setCallbacks(mCallBack)
+            .build()
+
+        PhoneAuthProvider.verifyPhoneNumber(options)
+
+//        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+//            mPhoneNumber,
+//            60,
+//            TimeUnit.SECONDS,
+//            activity as RegisterActivity,
+//            mCallBack
+//        )
     }
 }

@@ -1,4 +1,4 @@
-package com.example.biscuit
+package com.example.biscuit.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

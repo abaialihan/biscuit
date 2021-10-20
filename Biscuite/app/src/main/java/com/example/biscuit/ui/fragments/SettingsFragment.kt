@@ -3,7 +3,7 @@ package com.example.biscuit.ui.fragments
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import com.example.biscuit.MainActivity
+import com.example.biscuit.activities.MainActivity
 import com.example.biscuit.activities.RegisterActivity
 import com.example.biscuit.utilits.AUTH
 import com.example.biscuit.utilits.replaceActivity

@@ -1,14 +1,14 @@
 package com.example.biscuit.ui.fragments
 
 import androidx.fragment.app.Fragment
-import com.example.biscuit.MainActivity
+import com.example.biscuit.activities.MainActivity
 import com.example.biscuit.activities.RegisterActivity
 import com.example.biscuit.utilits.*
 import com.example.biscuite.R
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_code.*
 
-class EnterCodeFragment(val phoneNumber: String, val id: String) :
+class EnterCodeFragment(private val phoneNumber: String, val id: String) :
     Fragment(R.layout.fragment_enter_code) {
 
     override fun onStart() {
